@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: #ff4d4d;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e60000;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 id="welcomeMessage"></h1>
+    <button onclick="logout()">Logout</button>
+</div>
+
+<script>
+    // Get stored username
+    let username = localStorage.getItem("username");
+
+    // Show welcome message
+    if (username) {
+        document.getElementById("welcomeMessage").innerText = "Welcome, " + username;
+    } else {
+        // If no username found, redirect to login
+        window.location.href = "login.html";
+    }
+
+    function logout() {
+        alert("Logged out successfully");
+
+        // Redirect to login page
+        window.location.href = "login.html";
+    }
+</script>
+
+</body>
+</html>
