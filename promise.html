@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ag=Number(prompt("enter ypur age"))
+        let myPromise =new Promise((resolve, reject)=>{ 
+        let age=10;
+        if(age>=18){
+            console.log("major");
+            resolve("this user is major")
+        }else{
+            console.log("minor");
+            reject("this usre is minor")     
+        }
+    })
+    myPromise.then((res)=>{console.log(res)}).catch((err)=>
+    { console.error(err);
+    });
+    
+    </script>
+</body>
+</html>

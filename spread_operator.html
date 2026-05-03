@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr1=[10,20,30,40]
+        let arr2=[50,null,{name:"hari",role:"developer"},()=>{console.log("HELLO")}]
+        let arr3=[...arr1,...arr2,"html","css",true];
+        console.log(arr3);
+
+        let [a,b,c,d]=arr1;
+        console.log(a,b,c,d);
+
+        let [x,y,z,s]=arr2;
+         s();
+
+         //spread operators in object
+
+         let user={
+            name:"hari",
+            course:"btech"
+         }
+         let obj={
+            branch:"cse",
+            phno:6301066050
+         }
+
+         let history={...user,[name]:"hello"}
+         console.log(history)
+
+         let CourseDeatails={
+            name:'mern',
+            duration:"30days",
+            totalhrs:"180hr"
+         }
+         let {name,duration,totalhrs}=CourseDeatails;
+         
+         console.log(name);
+         
+
+    </script>
+</body>
+</html>
